@@ -20,6 +20,8 @@ namespace WpfApp2
     /// </summary>
     public partial class MainWindow : Window
     {
+        private string imgsource1 = @"\\sysprofile.adm.vvsu.ru\STUDENTPROFILES$\Elmir\Downloads\24152197af38deb718eb730992d441d0.jpg";
+        private string imgsource2 = @"\\sysprofile.adm.vvsu.ru\STUDENTPROFILES$\Elmir\Downloads\ltym.jpg";
         public MainWindow()
         {
             InitializeComponent();
@@ -30,6 +32,22 @@ namespace WpfApp2
             MainWindow window = new MainWindow();
             window.Show();
             this.Close();
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Приложение закрылось");
+            Application.Current.Shutdown();
+        }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            DisplayImage.Source = new BitmapImage(new Uri(imgsource1));
+        }
+
+        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        {
+            DisplayImage.Source = new BitmapImage(new Uri(imgsource2));
         }
     }
 }

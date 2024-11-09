@@ -7,7 +7,23 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="265,151,0,0" VerticalAlignment="Top" Width="244" Height="93" Click="Button_Click"/>
+        <Menu Height="25" VerticalAlignment ="Top">
+            <MenuItem Header="Файл" Height="25">
+                <MenuItem.Icon>
+                    <Image Source ="\\sysprofiles.adm.vvsu.ru\STUDENTRPROFILES$\Elmir\Downloads\file.jpg" Height="25" Width="37"></Image>
+                </MenuItem.Icon>
+                <MenuItem Header="Открыть" >
+                    <MenuItem Header="Файл 1" Click="MenuItem_Click_1"></MenuItem>
+                    <MenuItem Header="Файл 2" Click="MenuItem_Click_2"></MenuItem>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="Сохранить"></MenuItem>
+                <Separator/>
+                <MenuItem Header="Выйти" Click="MenuItem_Click"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <Button Content="далее" HorizontalAlignment="Left" Margin="265,151,0,0" VerticalAlignment="Top" Width="244" Height="93" Click="Button_Click"/>
+        <Image Name="DisplayImage" HorizontalAlignment="Left" Height="148" VerticalAlignment="Top" Width="202" Margin="20,144,0,0"/>
 
     </Grid>
 </Window>
